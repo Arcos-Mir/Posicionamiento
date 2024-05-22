@@ -1,0 +1,38 @@
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.contenedor .item {
+    background: #ff8000;
+    /*grid-column-start: 1; linea en la que inicia ele elemento*/
+    /*grid-column-end: 2;/* linea en la que termina el elemento para este caso de
+    linea inicial 1 y linea final 2 no hay cambio ya que es el trae por defecto*/
+    /*grid-column-start: 2;
+    grid-column-end: 5;/*podemos cambiar el posicionamiento y el tamaño del elemento
+    ya que podemos decirle que vaya del 1 al 4 o de 2 al 5, etc, si se le agrega una 
+    n ueva columna puede haber un problema ya que no utilizara todo el ancho del
+    contenedor para eso se pueden utilizar numeros negativos por ejemplo start 1 end -1*/
+
+    /*grid-row-start: 2;
+    grid-row-end: 4;*/
+
+    /*atajos*/
+    grid-column: 1/4;
+    grid-row: 1/3;
+    
+        /*
+    primer parametro: grid-row-start
+    segundo parametro: grid-column-start
+    tercer parametro: grid-row-end
+    cuarto parametro: grid-column-end
+    
+    grid-area: 2 / 1 / 4 / 3;*/
+
+    /*span 
+    el elmento se hace mas grande
+    grid-column: 1 span 3 ;
+    grid-row: 3 / span 2; , el 3 es para el posicionamiento*/
+}
